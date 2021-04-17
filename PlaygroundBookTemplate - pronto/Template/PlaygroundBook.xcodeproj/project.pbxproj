@@ -22,6 +22,7 @@
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
 		5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* LiveViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
+		B56BDC27262B777A00E590E3 /* WinGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BDC26262B777A00E590E3 /* WinGame.swift */; };
 		B59ED8B4262A0D7D00090A69 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ED8B3262A0D7D00090A69 /* Photo.swift */; };
 		B5FF9F25262A0E8E00492F5F /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF9F24262A0E8E00492F5F /* Story.swift */; };
 		B5FF9F2B262A0F3500492F5F /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF9F2A262A0F3500492F5F /* GameController.swift */; };
@@ -147,6 +148,7 @@
 		5EF2F9AB2054BBF300191409 /* libBookCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBookCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
+		B56BDC26262B777A00E590E3 /* WinGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinGame.swift; sourceTree = "<group>"; };
 		B59ED8B3262A0D7D00090A69 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		B5FF9F24262A0E8E00492F5F /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B5FF9F2A262A0F3500492F5F /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				B5FF9F33262A1BE800492F5F /* StoryUnit.swift */,
 				B5FF9F3B262A6D3500492F5F /* Polaroid.swift */,
 				B5FF9F40262A6D8100492F5F /* Game.swift */,
+				B56BDC26262B777A00E590E3 /* WinGame.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FF9F41262A6D8100492F5F /* Game.swift in Sources */,
+				B56BDC27262B777A00E590E3 /* WinGame.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
 				B5FF9F34262A1BE800492F5F /* StoryUnit.swift in Sources */,

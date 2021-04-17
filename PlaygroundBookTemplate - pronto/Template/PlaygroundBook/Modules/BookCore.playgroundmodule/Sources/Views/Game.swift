@@ -12,6 +12,7 @@ public struct Game: View {
     var layout = [GridItem(.adaptive(minimum: 320))]
     var nSelectedCards: Int = 0
     var gameController: GameController
+    @State private var viewSelection: String? = nil
     
     public init() {
         GameController.loadPhotosGame()
@@ -21,6 +22,10 @@ public struct Game: View {
     public var body: some View {
         NavigationView {
             GeometryReader { view in
+                NavigationLink(destination: WinGame().navigationBarHidden(true).navigationBarBackButtonHidden(true).navigationBarTitle(Text(""), displayMode: .inline), tag: "WinGame", selection: $viewSelection) {
+                    EmptyView()
+                }
+                
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: layout) {
                         ForEach(GameController.photosGame, id: \.id) { photo in
@@ -38,7 +43,7 @@ public struct Game: View {
                                     gameController.removeSelectedPhotos()
                                     
                                     if gameController.hasWon() {
-                                        print ("WIN!!!!!!!!!")
+                                        self.viewSelection = "WinGame"
                                     }
                                 } else if GameController.selectedPhotos.count == 2 {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -62,7 +67,9 @@ public struct Game: View {
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
-                .background(Color(red: 139.0/255, green: 69.0/255, blue: 19.0/255))
+                .background(
+                    Image("wood-background").resizable().aspectRatio(contentMode: .fill)
+                )
                 .ignoresSafeArea(.all)
             }
             .ignoresSafeArea(.all)
