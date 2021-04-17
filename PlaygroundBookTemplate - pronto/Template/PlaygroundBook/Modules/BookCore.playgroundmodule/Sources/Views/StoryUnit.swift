@@ -19,9 +19,10 @@ public struct StoryUnit: View {
     }
     
     public var body: some View {
-        NavigationView {
-            GeometryReader { view in
-                VStack(alignment: .trailing) {
+        GeometryReader { view in
+            ZStack(alignment: .top) {
+                // MARK: Skip Button
+                if storyIndex < GameController.stories.count - 1 {
                     VStack {
                         NavigationLink(destination: Game()) {
                             Text("Skip")
@@ -30,71 +31,69 @@ public struct StoryUnit: View {
                                 .font(.system(size: 35))
                         }
                         .navigationBarTitle(Text(""))
-                        .border(Color.black)
+                        .padding(10)
                     }
+                    .zIndex(1)
+                    .frame(width: view.size.width, alignment: .trailing)
                     .background(Color.white)
-                    .padding(.top, view.size.height / 10)
-                    .padding(.trailing, 15)
-                    
-                    HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
-                        if storyIndex > 0 {
-                            Button(action: {
-                                self.presentationMode.wrappedValue.dismiss()
-                            }) {
-                                Image(systemName: "chevron.left")
-                                    .font(.system(size: 56.0))
-                            }
-                            .frame(height: view.size.height - view.size.height / 4)
-                            .padding(15)
-                        } else {
-                            Button(action: {}) {
-                                Image(systemName: "chevron.left")
-                                    .font(.system(size: 56.0))
-                            }
-                            .frame(height: view.size.height - view.size.height / 4)
-                            .padding(15)
-                            .hidden()
-                        }
-                            
-                        VStack(alignment: .center) {
-                            Image(story.image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .clipped()
-                                .frame(height: view.size.height - view.size.height / 4, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-
-                            Text(story.text)
-                                .font(.title2)
-                                .multilineTextAlignment(.center)
-                                .foregroundColor(.black)
-                                .padding(.top, -view.size.height / 16)
-                        }
-                        
-                        NavigationLink(
-                            destination:
-                                storyIndex < GameController.stories.count - 1 ?
-                                AnyView(StoryUnit(story: GameController.stories[storyIndex + 1], storyIndex: storyIndex + 1)) :
-                                AnyView(Game().navigationBarTitle("", displayMode: .inline).navigationBarHidden(true))
-                        ) {
-                            Image(systemName: "chevron.right")
+                } else {
+                    EmptyView()
+                }
+                // MARK: Photo, Back, and Foward Buttons
+                HStack(alignment: .center) {
+                    // MARK: Back Button
+                    if storyIndex > 0 {
+                        Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Image(systemName: "chevron.left")
                                 .font(.system(size: 56.0))
                         }
                         .frame(height: view.size.height - view.size.height / 4)
                         .padding(15)
+                    } else {
+                        Button(action: {}) {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 56.0))
+                        }
+                        .frame(height: view.size.height - view.size.height / 4)
+                        .padding(15)
+                        .hidden()
                     }
-                    .frame(minWidth: view.size.width, idealWidth: view.size.width, maxWidth: view.size.width, minHeight: view.size.height, idealHeight: view.size.height, maxHeight: view.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .padding(.top, -view.size.height / 7)
+                    // MARK: Story Image
+                    VStack(alignment: .center) {
+                        Image(story.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipped()
+                            .frame(height: view.size.height - view.size.height / 4, alignment: .center)
+
+                        Text(story.text)
+                            .font(.custom("Verdana", size: 22))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.black)
+                            .padding(.top, -view.size.height / 16)
+                    }
+                    // MARK: Foward Button
+                    NavigationLink(
+                        destination:
+                            storyIndex < GameController.stories.count - 1 ?
+                            AnyView(StoryUnit(story: GameController.stories[storyIndex + 1], storyIndex: storyIndex + 1)) :
+                            AnyView(Game().navigationBarTitle("", displayMode: .inline).navigationBarHidden(true))
+                    ) {
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 56.0))
+                    }
+                    .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true)
+                    .navigationBarTitle(Text(""), displayMode: .inline)
+                    .frame(height: view.size.height - view.size.height / 4)
+                    .padding(15)
                 }
-                .background(Color.white)
+                .frame(width: view.size.width, height: view.size.height, alignment: .center)
             }
-            .ignoresSafeArea(.all)
+            .frame(width: view.size.width, height: view.size.height, alignment: .top)
             .background(Color.white)
-            .navigationViewStyle(StackNavigationViewStyle())
-            .navigationBarBackButtonHidden(true)
         }
-//        .background(Color.white)
-        .navigationViewStyle(StackNavigationViewStyle())
-        .navigationBarBackButtonHidden(true)
-        
     }
 }

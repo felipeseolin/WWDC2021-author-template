@@ -10,13 +10,11 @@ import Foundation
 public class GameController {
     // MARK: Stories
     public static let stories: [Story] = [
-        Story(image: "story-1", text: "There was a little girl who liked to draw a lot, her name was Sarah"),
-        Story(image: "story-2", text: "There was a little girl who liked to draw a lot, her name was Sarah"),
-//        Story(image: "story-3", text: "There was a little girl who liked to draw a lot, her name was Sarah"),
-//        Story(image: "story-4", text: "There was a little girl who liked to draw a lot, her name was Sarah"),
-//        Story(image: "story-1", text: "There was a little girl who liked to draw a lot, her name was Sarah"),
-//        Story(image: "story-1", text: "There was a little girl who liked to draw a lot, her name was Sarah"),
-//        Story(image: "story-1", text: "There was a little girl who liked to draw a lot, her name was Sarah"),
+        Story(image: "story-1", text: "There was a little girl who liked to draw a lot, her name was Sarah."),
+        Story(image: "story-2", text: "Whenever Sarah finished her drawings, she used to show them to her grandma who lived with her. Until one day she realized that her grandmother no longer recognized her drawings and sometimes she acted weird, looking like she didn't recognize her own granddaughter."),
+        Story(image: "story-3", text: "When questioning her mother why, she explains that grandma is gradually losing her memory and the doctor said she needs to exercise her brain."),
+        Story(image: "story-4", text: "So the girl decided to make a pretty drawing for her grandma, therefore she ran to get more colored pencils that were on a shelf in her grandma's room"),
+        Story(image: "story-5", text: "However, when reaching for the container with the colored pencils, a box fell with several old photos of the family. The girl had never seen these photos and soon had an idea: Make a memory game for her grandmother to exercise her brain trying to memorize the position of the photos and also remembering the moments she lived and telling to her family"),
     ]
     // MARK: Photos
     public static let photos: Set<Photo> = [

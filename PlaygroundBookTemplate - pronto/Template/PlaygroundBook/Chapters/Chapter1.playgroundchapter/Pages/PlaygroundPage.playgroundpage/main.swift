@@ -14,8 +14,19 @@ import SwiftUI
 if #available(iOS 14, *) {
     struct ContentView: View {
         var body: some View {
-            StoryUnit(story: GameController.stories[0], storyIndex: 0)
-//            Game()
+            NavigationView {
+                GeometryReader { view in
+                    VStack {
+                        StoryUnit(story: GameController.stories[0], storyIndex: 0)
+                    }
+                    .frame(width: view.size.width, height: view.size.height)
+                    .navigationBarTitle(Text(""), displayMode: .inline)
+                }
+            }
+            .ignoresSafeArea(.all)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
     }
 
