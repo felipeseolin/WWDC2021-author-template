@@ -24,6 +24,7 @@ public struct Polaroid: View {
                 Text(photo.title)
                     .font(.custom("Noteworthy", size: 30))
                     .padding(.bottom, 25)
+                    .foregroundColor(.black)
             }
     }
     // MARK: INIT
