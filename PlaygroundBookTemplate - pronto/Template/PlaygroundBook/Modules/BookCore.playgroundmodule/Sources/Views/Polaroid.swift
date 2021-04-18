@@ -23,6 +23,7 @@ public struct Polaroid: View {
                     .padding(.bottom, 5)
                 Text(photo.title)
                     .font(.custom("Noteworthy", size: 30))
+                    .multilineTextAlignment(.center)
                     .padding(.bottom, 25)
                     .foregroundColor(.black)
             }

@@ -18,7 +18,8 @@ if #available(iOS 14, *) {
                 GeometryReader { view in
                     VStack {
 //                        StoryUnit(story: GameController.stories[0], storyIndex: 0)
-                        Game()
+//                        Game()
+                        WinGame()
                     }
                     .frame(width: view.size.width, height: view.size.height)
                     .navigationBarTitle(Text(""), displayMode: .inline)
