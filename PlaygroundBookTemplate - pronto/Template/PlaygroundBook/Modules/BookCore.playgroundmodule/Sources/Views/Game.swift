@@ -29,7 +29,7 @@ public struct Game: View {
                 LazyVGrid(columns: layout) {
                     ForEach(GameController.photosGame, id: \.id) { photo in
                         Button(action: {
-                            if (GameController.selectedPhotos.count >= 2) {
+                            if (GameController.selectedPhotos.count >= 2 || photo.isMatched) {
                                 return
                             }
                             
@@ -71,6 +71,8 @@ public struct Game: View {
                 Image("wood-background").resizable().aspectRatio(contentMode: .fill)
             )
             .ignoresSafeArea(.all)
+            .transition(.asymmetric(insertion: AnyTransition.opacity.combined(with: .slide), removal: .scale))
+            .animation(.default)
         }
         .ignoresSafeArea(.all)
     }

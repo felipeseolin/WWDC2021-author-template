@@ -18,7 +18,7 @@ public class GameController {
         Story(image: "story-5", text: "However, when reaching for the container with the colored pencils, a box fell with several old photos of the family. The girl had never seen these photos and soon had an idea: Make a memory game for her grandmother to exercise her brain trying to memorize the position of the photos and also remembering the moments she lived and telling to her family"),
     ]
     // MARK: Photos
-    public static let photos: Set<Photo> = [
+    public static var photos: Set<Photo> = [
         Photo(title: "Uncle and aunt Wedding", image: "photo-1"),
         Photo(title: "Skateboarding", image: "photo-4"),
         Photo(title: "Mom and Baby Sarah", image: "photo-7"),

@@ -31,7 +31,7 @@ public struct StoryUnit: View {
                                 .font(.system(size: 35))
                         }
                         .navigationBarTitle(Text(""))
-                        .padding(10)
+                        .padding(20)
                     }
                     .zIndex(1)
                     .frame(width: view.size.width, alignment: .trailing)
@@ -72,7 +72,8 @@ public struct StoryUnit: View {
                             .font(.custom("Verdana", size: 22))
                             .multilineTextAlignment(.center)
                             .foregroundColor(.black)
-                            .padding(.top, -view.size.height / 16)
+                            .padding(.top, -view.size.height / 10)
+                            .background(Color.white)
                     }
                     // MARK: Foward Button
                     NavigationLink(
@@ -90,10 +91,14 @@ public struct StoryUnit: View {
                     .frame(height: view.size.height - view.size.height / 4)
                     .padding(15)
                 }
+                .padding(.top, -view.size.height / 6)
                 .frame(width: view.size.width, height: view.size.height, alignment: .center)
             }
             .frame(width: view.size.width, height: view.size.height, alignment: .top)
             .background(Color.white)
+            .padding(.top, 65)
         }
+        .ignoresSafeArea(.all)
+        .background(Color.white)
     }
 }

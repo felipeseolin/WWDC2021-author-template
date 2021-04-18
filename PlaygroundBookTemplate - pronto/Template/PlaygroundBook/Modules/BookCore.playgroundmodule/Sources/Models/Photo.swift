@@ -15,8 +15,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
     @Published var show: Bool = false
     @Published var isMatched: Bool = false
     
-    
-    init(title: String, image: String) {
+    public init(title: String, image: String) {
         self.id = UUID()
         self.title = title
         self.image = image
@@ -24,7 +23,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = false
     }
     
-    init(title: String, description: String, image: String) {
+    public init(title: String, description: String, image: String) {
         self.id = UUID()
         self.title = title
         self.description = description
@@ -33,7 +32,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = false
     }
     
-    init(id: UUID, title: String, description: String, image: String, show: Bool, isMatched: Bool) {
+    public init(id: UUID, title: String, description: String, image: String, show: Bool, isMatched: Bool) {
         self.id = id
         self.title = title
         self.description = description
@@ -42,7 +41,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = isMatched
     }
     
-    init(title: String, description: String, image: String, show: Bool, isMatched: Bool) {
+    public init(title: String, description: String, image: String, show: Bool, isMatched: Bool) {
         self.id = UUID()
         self.title = title
         self.description = description
@@ -51,7 +50,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = isMatched
     }
     
-    init(title: String, description: String, image: String, show: Bool) {
+    public init(title: String, description: String, image: String, show: Bool) {
         self.id = UUID()
         self.title = title
         self.description = description
