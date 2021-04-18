@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 public class GameController {
     // MARK: Stories
@@ -24,6 +25,8 @@ public class GameController {
     ]
     public static var photosGame: [Photo] = []
     public static var selectedPhotos: Set<Photo> = []
+    // MARK: Sound Effects
+    public var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     
     public static func loadPhotosGame() {
         GameController.photosGame = []
@@ -93,5 +96,23 @@ public class GameController {
     
     public func getSeletedPhoto(at: Int) -> Photo {
         return GameController.selectedPhotos[GameController.selectedPhotos.index(GameController.selectedPhotos.startIndex, offsetBy: at)]
+    }
+    
+    public func playSound(_ url: URL) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.setVolume(0.05, fadeDuration: 0)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch {
+            return
+        }
+    }
+    
+    public func playPaperSoundEffect() {
+        if let path = Bundle.main.path(forResource: "paper", ofType: "mp3") {
+            let url = URL(fileURLWithPath: path)
+            self.playSound(url)
+        }
     }
 }

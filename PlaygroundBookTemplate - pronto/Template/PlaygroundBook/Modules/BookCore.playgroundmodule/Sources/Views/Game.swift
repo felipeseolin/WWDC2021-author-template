@@ -36,6 +36,7 @@ public struct Game: View {
                                 
                                 photo.show = true
                                 gameController.selectPhoto(photo)
+                                gameController.playPaperSoundEffect()
                                 
                                 if gameController.checkMatch() {
                                     gameController.setSelectPhotoAsMatch()
