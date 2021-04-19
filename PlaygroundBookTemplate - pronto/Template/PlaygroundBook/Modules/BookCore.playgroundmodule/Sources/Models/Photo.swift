@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopying {
     public var id = UUID()
     var title: String
     var description: String?
-    var image: String
+    var image: UIImage
     @Published var show: Bool = false
     @Published var isMatched: Bool = false
     
-    public init(title: String, image: String) {
+    public init(title: String, image: UIImage) {
         self.id = UUID()
         self.title = title
         self.image = image
@@ -23,7 +24,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = false
     }
     
-    public init(title: String, description: String, image: String) {
+    public init(title: String, description: String, image: UIImage) {
         self.id = UUID()
         self.title = title
         self.description = description
@@ -32,7 +33,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = false
     }
     
-    public init(id: UUID, title: String, description: String, image: String, show: Bool, isMatched: Bool) {
+    public init(id: UUID, title: String, description: String, image: UIImage, show: Bool, isMatched: Bool) {
         self.id = id
         self.title = title
         self.description = description
@@ -41,7 +42,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = isMatched
     }
     
-    public init(title: String, description: String, image: String, show: Bool, isMatched: Bool) {
+    public init(title: String, description: String, image: UIImage, show: Bool, isMatched: Bool) {
         self.id = UUID()
         self.title = title
         self.description = description
@@ -50,7 +51,7 @@ public class Photo: Hashable, Equatable, Identifiable, ObservableObject, NSCopyi
         self.isMatched = isMatched
     }
     
-    public init(title: String, description: String, image: String, show: Bool) {
+    public init(title: String, description: String, image: UIImage, show: Bool) {
         self.id = UUID()
         self.title = title
         self.description = description

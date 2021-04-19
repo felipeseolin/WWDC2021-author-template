@@ -15,7 +15,7 @@ public struct Polaroid: View {
     // MARK: Contet View
     var polaroidContent: some View {
             VStack {
-                Image(photo.image)
+                Image(uiImage: photo.image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 297.6, height: 297.6)

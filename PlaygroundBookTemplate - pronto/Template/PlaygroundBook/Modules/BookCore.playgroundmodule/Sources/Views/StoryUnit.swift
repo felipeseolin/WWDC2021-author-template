@@ -13,7 +13,6 @@ public struct StoryUnit: View {
     var storyIndex: Int
     @Environment(\.presentationMode) var presentationMode
     @State private var viewSelection: String? = nil
-    
     public init(story: Story, storyIndex: Int) {
         self.story = story
         self.storyIndex = storyIndex

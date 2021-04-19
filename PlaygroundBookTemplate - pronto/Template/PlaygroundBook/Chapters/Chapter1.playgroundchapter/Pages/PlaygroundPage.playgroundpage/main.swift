@@ -1,13 +1,13 @@
 /*:
  ![Remember Game](code-cover.jpg)
  
- # Título principal!
+ The **Remember Game** is a game made for seniors, that needs to exercise their brains,
  
  Um demo *simples* com exemplos de *markup*.
  
  Algo muito importante em **negrito** chama muita **atenção**
  
- 
+ ™
  ## Isso é um subtítulo nível 2
  ### Isso é um subtítulo nível 3
  
@@ -38,7 +38,6 @@
 //  Abstract:
 //  The Swift file containing the source code edited by the user of this playground book.
 //
-//#-end-hidden-code
 import PlaygroundSupport
 import BookCore
 import SwiftUI
@@ -49,11 +48,10 @@ if #available(iOS 14, *) {
         public var audioPlayer: AVAudioPlayer = AVAudioPlayer()
         
         public init() {
-            GameController.photos = [
-                Photo(title: "Uncle and aunt Wedding 2", image: "photo-1"),
-                Photo(title: "Skateboarding 2", image: "photo-4"),
-                Photo(title: "Mom and Baby Sarah 2", image: "photo-7"),
-            ]
+            //#-end-hidden-code
+            //#-code-completion(literal, show)
+GameController.photos = /*#-editable-code*/[Photo(title: "Uncle and aunt Wedding", image: #imageLiteral(resourceName: "photo-1")), Photo(title: "Skateboarding", image: #imageLiteral(resourceName: "photo-4")), Photo(title: "Mom and Baby Sarah", image: #imageLiteral(resourceName: "photo-7")),]/*#-end-editable-code*/
+            //#-hidden-code
             self.playMainSoundTrack()
             GameController.playStory()
         }
@@ -77,8 +75,6 @@ if #available(iOS 14, *) {
                 GeometryReader { view in
                     VStack {
                         StoryUnit(story: GameController.stories[0], storyIndex: 0)
-//                        Game()
-//                        WinGame()
                     }
                     .frame(width: view.size.width, height: view.size.height)
                     .navigationBarTitle(Text(""), displayMode: .inline)
@@ -96,9 +92,5 @@ if #available(iOS 14, *) {
     PlaygroundPage.current.setLiveView(Text("Sorry, you need iOS 14 at least"))
 }
 PlaygroundPage.current.needsIndefiniteExecution = true
+//#-end-hidden-code
 
-
-//#-code-completion(literal, show, color)
-//Uma variável que pode ser editada por código (tbm só no iPad)
-var pontos = /*#-editable-code*/5/*#-end-editable-code*/
-var color = /*#-editable-code*/#colorLiteral(red: 0.9921568627, green: 0.7215686275, blue: 0.1529411765, alpha: 1)/*#-end-editable-code*/

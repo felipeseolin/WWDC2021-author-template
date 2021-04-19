@@ -43,7 +43,9 @@ public struct Game: View {
                                 gameController.removeSelectedPhotos()
                                 
                                 if gameController.hasWon() {
-                                    self.viewSelection = "WinGame"
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                        self.viewSelection = "WinGame"
+                                    }
                                 }
                             } else if GameController.selectedPhotos.count == 2 {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

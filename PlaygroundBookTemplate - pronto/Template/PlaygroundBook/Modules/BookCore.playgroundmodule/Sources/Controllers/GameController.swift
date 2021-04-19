@@ -20,9 +20,9 @@ public class GameController {
     public static var storyIndex: Int = 1
     // MARK: Photos
     public static var photos: Set<Photo> = [
-        Photo(title: "Uncle and aunt Wedding", image: "photo-1"),
-        Photo(title: "Skateboarding", image: "photo-4"),
-        Photo(title: "Mom and Baby Sarah", image: "photo-7"),
+        Photo(title: "Uncle and aunt Wedding", image: #imageLiteral(resourceName: "photo-1")),
+        Photo(title: "Skateboarding", image: #imageLiteral(resourceName: "photo-4")),
+        Photo(title: "Mom and Baby Sarah", image: #imageLiteral(resourceName: "photo-7")),
     ]
     public static var photosGame: [Photo] = []
     public static var selectedPhotos: Set<Photo> = []
