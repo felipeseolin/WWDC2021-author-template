@@ -1,5 +1,5 @@
 /*:
- ![Uma imagem explicativa](code-cover.jpg)
+ ![Remember Game](code-cover.jpg)
  
  # Título principal!
  
@@ -38,13 +38,15 @@
 //  Abstract:
 //  The Swift file containing the source code edited by the user of this playground book.
 //
-
+//#-end-hidden-code
 import PlaygroundSupport
 import BookCore
 import SwiftUI
+import AVFoundation
 
 if #available(iOS 14, *) {
     struct ContentView: View {
+        public var audioPlayer: AVAudioPlayer = AVAudioPlayer()
         
         public init() {
             GameController.photos = [
@@ -52,6 +54,22 @@ if #available(iOS 14, *) {
                 Photo(title: "Skateboarding 2", image: "photo-4"),
                 Photo(title: "Mom and Baby Sarah 2", image: "photo-7"),
             ]
+            self.playMainSoundTrack()
+            GameController.playStory()
+        }
+        
+        private mutating func playMainSoundTrack() {
+            do {
+                guard let path = Bundle.main.path(forResource: "main-soundtrack", ofType: "mp3") else { return }
+                let url = URL(fileURLWithPath: path)
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.setVolume(0.2, fadeDuration: 0)
+                audioPlayer.numberOfLoops = -1
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+            } catch {
+                return
+            }
         }
         
         var body: some View {
@@ -78,7 +96,7 @@ if #available(iOS 14, *) {
     PlaygroundPage.current.setLiveView(Text("Sorry, you need iOS 14 at least"))
 }
 PlaygroundPage.current.needsIndefiniteExecution = true
-//#-end-hidden-code
+
 
 //#-code-completion(literal, show, color)
 //Uma variável que pode ser editada por código (tbm só no iPad)

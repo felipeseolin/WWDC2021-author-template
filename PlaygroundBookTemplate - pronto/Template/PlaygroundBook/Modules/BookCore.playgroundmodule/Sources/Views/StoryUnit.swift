@@ -12,6 +12,7 @@ public struct StoryUnit: View {
     var story: Story
     var storyIndex: Int
     @Environment(\.presentationMode) var presentationMode
+    @State private var viewSelection: String? = nil
     
     public init(story: Story, storyIndex: Int) {
         self.story = story
@@ -20,11 +21,21 @@ public struct StoryUnit: View {
     
     public var body: some View {
         GeometryReader { view in
+            NavigationLink(destination: Game().navigationBarHidden(true).navigationBarBackButtonHidden(true).navigationBarTitle(Text(""), displayMode: .inline), tag: "Game", selection: $viewSelection) {
+                EmptyView()
+            }
+            NavigationLink(destination: storyIndex < GameController.stories.count - 1 ? AnyView(StoryUnit(story: GameController.stories[storyIndex + 1], storyIndex: storyIndex + 1).navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)) : AnyView(EmptyView()), tag: "Story", selection: $viewSelection) {
+                EmptyView()
+            }
+            
             ZStack(alignment: .top) {
                 // MARK: Skip Button
                 if storyIndex < GameController.stories.count - 1 {
                     VStack {
-                        NavigationLink(destination: Game()) {
+                        Button(action: {
+                            GameController.stopStory()
+                            self.viewSelection = "Game"
+                        }) {
                             Text("Skip")
                                 .font(.system(size: 25))
                             Image(systemName: "chevron.forward.2")
@@ -44,6 +55,7 @@ public struct StoryUnit: View {
                     // MARK: Back Button
                     if storyIndex > 0 {
                         Button(action: {
+                            GameController.playPreviousStory()
                             self.presentationMode.wrappedValue.dismiss()
                         }) {
                             Image(systemName: "chevron.left")
@@ -76,12 +88,16 @@ public struct StoryUnit: View {
                             .background(Color.white)
                     }
                     // MARK: Foward Button
-                    NavigationLink(
-                        destination:
-                            storyIndex < GameController.stories.count - 1 ?
-                            AnyView(StoryUnit(story: GameController.stories[storyIndex + 1], storyIndex: storyIndex + 1)) :
-                            AnyView(Game().navigationBarTitle("", displayMode: .inline).navigationBarHidden(true))
-                    ) {
+                    Button(action: {
+                        if storyIndex < GameController.stories.count - 1 {
+                            print(storyIndex)
+                            GameController.playNextStory()
+                            self.viewSelection = "Story"
+                        } else {
+                            GameController.stopStory()
+                            self.viewSelection = "Game"
+                        }
+                    }) {
                         Image(systemName: "chevron.right")
                             .font(.system(size: 56.0))
                     }

@@ -15,8 +15,9 @@ public class GameController {
         Story(image: "story-2", text: "Whenever Sarah finished her drawings, she used to show them to her grandma who lived with her. Until one day she realized that her grandmother no longer recognized her drawings and sometimes she acted weird, looking like she didn't recognize her own granddaughter."),
         Story(image: "story-3", text: "When questioning her mother why, she explains that grandma is gradually losing her memory and the doctor said she needs to exercise her brain."),
         Story(image: "story-4", text: "So the girl decided to make a pretty drawing for her grandma, therefore she ran to get more colored pencils that were on a shelf in her grandma's room"),
-        Story(image: "story-5", text: "However, when reaching for the container with the colored pencils, a box fell with several old photos of the family. The girl had never seen these photos and soon had an idea: Make a memory game for her grandmother to exercise her brain trying to memorize the position of the photos and also remembering the moments she lived and telling to her family"),
+        Story(image: "story-5", text: "However, when reaching for the container with the colored pencils, a box felt with several old photos of the family. The girl had never seen these photos and soon had an idea: Make a memory game for her grandmother to exercise her brain trying to memorize the position of the photos and also remembering the moments she lived and telling to her family"),
     ]
+    public static var storyIndex: Int = 1
     // MARK: Photos
     public static var photos: Set<Photo> = [
         Photo(title: "Uncle and aunt Wedding", image: "photo-1"),
@@ -26,7 +27,7 @@ public class GameController {
     public static var photosGame: [Photo] = []
     public static var selectedPhotos: Set<Photo> = []
     // MARK: Sound Effects
-    public var audioPlayer: AVAudioPlayer = AVAudioPlayer()
+    public static var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     
     public static func loadPhotosGame() {
         GameController.photosGame = []
@@ -98,10 +99,10 @@ public class GameController {
         return GameController.selectedPhotos[GameController.selectedPhotos.index(GameController.selectedPhotos.startIndex, offsetBy: at)]
     }
     
-    public func playSound(_ url: URL) {
+    public static func playSound(_ url: URL, volume: Float = 1) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.setVolume(0.05, fadeDuration: 0)
+            audioPlayer.setVolume(volume, fadeDuration: 0)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
         } catch {
@@ -112,7 +113,29 @@ public class GameController {
     public func playPaperSoundEffect() {
         if let path = Bundle.main.path(forResource: "paper", ofType: "mp3") {
             let url = URL(fileURLWithPath: path)
-            self.playSound(url)
+            GameController.playSound(url, volume: 0.05)
         }
+    }
+    
+    public static func playStory() {
+        GameController.stopStory()
+        if let path = Bundle.main.path(forResource: "story-\(GameController.storyIndex)", ofType: "mp3") {
+            let url = URL(fileURLWithPath: path)
+            GameController.playSound(url, volume: 0.5)
+        }
+    }
+    
+    public static func stopStory() {
+        GameController.audioPlayer.stop()
+    }
+    
+    public static func playNextStory() {
+        GameController.storyIndex += 1
+        GameController.playStory()
+    }
+    
+    public static func playPreviousStory() {
+        GameController.storyIndex -= 1
+        GameController.playStory()
     }
 }

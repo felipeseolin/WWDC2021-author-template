@@ -26,6 +26,12 @@
 		B56BDC2C262BB19900E590E3 /* paper.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56BDC2B262BB19900E590E3 /* paper.mp3 */; };
 		B56BDC38262BCB5900E590E3 /* PlaygroundCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B56BDC37262BCB5900E590E3 /* PlaygroundCover.jpg */; };
 		B59ED8B4262A0D7D00090A69 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ED8B3262A0D7D00090A69 /* Photo.swift */; };
+		B5A24A49262CE8230012506C /* story-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5A24A43262CE8230012506C /* story-2.mp3 */; };
+		B5A24A4A262CE8230012506C /* main-soundtrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5A24A44262CE8230012506C /* main-soundtrack.mp3 */; };
+		B5A24A4B262CE8230012506C /* story-4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5A24A45262CE8230012506C /* story-4.mp3 */; };
+		B5A24A4C262CE8230012506C /* story-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5A24A46262CE8230012506C /* story-3.mp3 */; };
+		B5A24A4D262CE8230012506C /* story-5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5A24A47262CE8230012506C /* story-5.mp3 */; };
+		B5A24A4E262CE8230012506C /* story-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5A24A48262CE8230012506C /* story-1.mp3 */; };
 		B5FF9F25262A0E8E00492F5F /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF9F24262A0E8E00492F5F /* Story.swift */; };
 		B5FF9F2B262A0F3500492F5F /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF9F2A262A0F3500492F5F /* GameController.swift */; };
 		B5FF9F34262A1BE800492F5F /* StoryUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF9F33262A1BE800492F5F /* StoryUnit.swift */; };
@@ -154,6 +160,12 @@
 		B56BDC2B262BB19900E590E3 /* paper.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = paper.mp3; sourceTree = "<group>"; };
 		B56BDC37262BCB5900E590E3 /* PlaygroundCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PlaygroundCover.jpg; sourceTree = "<group>"; };
 		B59ED8B3262A0D7D00090A69 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B5A24A43262CE8230012506C /* story-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "story-2.mp3"; sourceTree = "<group>"; };
+		B5A24A44262CE8230012506C /* main-soundtrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "main-soundtrack.mp3"; sourceTree = "<group>"; };
+		B5A24A45262CE8230012506C /* story-4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "story-4.mp3"; sourceTree = "<group>"; };
+		B5A24A46262CE8230012506C /* story-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "story-3.mp3"; sourceTree = "<group>"; };
+		B5A24A47262CE8230012506C /* story-5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "story-5.mp3"; sourceTree = "<group>"; };
+		B5A24A48262CE8230012506C /* story-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "story-1.mp3"; sourceTree = "<group>"; };
 		B5FF9F24262A0E8E00492F5F /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B5FF9F2A262A0F3500492F5F /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		B5FF9F33262A1BE800492F5F /* StoryUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryUnit.swift; sourceTree = "<group>"; };
@@ -364,6 +376,12 @@
 		B56BDC30262BB1CD00E590E3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B5A24A44262CE8230012506C /* main-soundtrack.mp3 */,
+				B5A24A48262CE8230012506C /* story-1.mp3 */,
+				B5A24A43262CE8230012506C /* story-2.mp3 */,
+				B5A24A46262CE8230012506C /* story-3.mp3 */,
+				B5A24A45262CE8230012506C /* story-4.mp3 */,
+				B5A24A47262CE8230012506C /* story-5.mp3 */,
 				B56BDC2B262BB19900E590E3 /* paper.mp3 */,
 			);
 			path = Sounds;
@@ -527,9 +545,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
+				B5A24A4A262CE8230012506C /* main-soundtrack.mp3 in Resources */,
 				5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */,
 				B56BDC38262BCB5900E590E3 /* PlaygroundCover.jpg in Resources */,
+				B5A24A4C262CE8230012506C /* story-3.mp3 in Resources */,
+				B5A24A4B262CE8230012506C /* story-4.mp3 in Resources */,
 				5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */,
+				B5A24A4D262CE8230012506C /* story-5.mp3 in Resources */,
+				B5A24A4E262CE8230012506C /* story-1.mp3 in Resources */,
+				B5A24A49262CE8230012506C /* story-2.mp3 in Resources */,
 				B56BDC2C262BB19900E590E3 /* paper.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
