@@ -35,12 +35,6 @@ public struct WinGame: View {
                 .padding(20)
                 .background(Color(#colorLiteral(red: 0.9607843137, green: 0.6392156863, blue: 0.6274509804, alpha: 1)))
                 .cornerRadius(15)
-                
-                Text("Try editing the playgrounds on the left side, and share to your family and friends")
-                    .font(.custom("Verdana", size: 15))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color(#colorLiteral(red: 0.2235294118, green: 0.2156862745, blue: 0.3019607843, alpha: 1)))
-                    .padding(.top, view.size.height / 20)
             }
             .background(Color.white)
             .frame(width: view.size.width, height: view.size.height, alignment: .center)

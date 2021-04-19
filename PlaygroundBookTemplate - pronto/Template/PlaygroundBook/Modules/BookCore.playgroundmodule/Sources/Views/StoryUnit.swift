@@ -77,13 +77,13 @@ public struct StoryUnit: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .clipped()
-                            .frame(height: view.size.height - view.size.height / 4, alignment: .center)
+                            .frame(height: view.size.height / 2, alignment: .center)
 
                         Text(story.text)
                             .font(.custom("Verdana", size: 22))
                             .multilineTextAlignment(.center)
                             .foregroundColor(.black)
-                            .padding(.top, -view.size.height / 10)
+                            .padding(.top, 10)
                             .background(Color.white)
                     }
                     // MARK: Foward Button

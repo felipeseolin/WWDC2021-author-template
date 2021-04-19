@@ -1,37 +1,33 @@
 /*:
  ![Remember Game](code-cover.jpg)
  
- The **Remember Game** is a game made for seniors, that needs to exercise their brains,
+The **Remember Game** is a game made for the elderly and aims to exercise the players' minds. In this way, the game provides a unique experience, as it stimulates memory in two ways: by arranging pairs of scrambled photos, where players must find the matching pair by turning two photos at a time, and also when discussing the moment that photo represents together with the other players, as soon as the pair is found, also increasing the social interaction between family and friends.
  
- Um demo *simples* com exemplos de *markup*.
+ # Inspiration
+ The [UK NHS](https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/loneliness-in-older-people/) says "Older people are especially vulnerable to loneliness and social isolation – and it can have a serious effect on health. But there are ways to overcome loneliness, even if you live alone and find it hard to get out".
+ Diseases related to memory loss can be caused by several factors, but the social interaction and brain exercise absence, call attention. Because they are factors that are in the lives of most of the population, but there is a change with the elderly.
+ For this reason the Remember Game aims to increase social interaction while stimulating memory, the game itself is made to be as simple as possible, so that none of the players would stop being interested because of rules that could take the focus off of the game, which is the social interaction and remembrance of special moments between the players.
  
- Algo muito importante em **negrito** chama muita **atenção**
+ # Share
+ To share this Playground your can click on the 􀈂 icon, that are located at the right top corner of your display
  
- ™
- ## Isso é um subtítulo nível 2
- ### Isso é um subtítulo nível 3
+ # Make your own Remember Game
+ - Note: For better experience use this Playground in full screen and at a bigger screen
  
- Você pode fazer uma linha para dividir seções
+ Here you can edit your Remember Game photos, just add the title and image you want as follows:
+ * callout(Photo edit): Photo(title: "My photo", image: "photo")
  
- ---
+ You can also add a longer description for your photo as follows
+ * callout(Photo edit): Photo(title: "My photo", description: "My photo description", image: "photo")
  
- - Note: Uma nota legal que aparece assim
+ To add elements, simply click and drag on the icon **]:**
  
- - Experiment: Experimente trocar a velocidade do bonequinho para ver o que acontece!!
+ # Edit here
  
- ## Bullet Points
-* Ponto importante 1
-* Ponto ❤️
-* Cuidado com as 🕷🕷🕷 **aranhas**
- 
-1) Numerados
-1) Numerados
- 
- 
- Você pode usar [links](http://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/) com referências
  */
 
 //#-hidden-code
+
 //
 //  See LICENSE folder for this template’s licensing information.
 //

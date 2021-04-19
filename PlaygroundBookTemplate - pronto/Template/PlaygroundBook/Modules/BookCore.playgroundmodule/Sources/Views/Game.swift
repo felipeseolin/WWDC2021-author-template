@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PlaygroundSupport
 
 @available(iOS 14.0, *)
 public struct Game: View {
@@ -45,6 +46,7 @@ public struct Game: View {
                                 if gameController.hasWon() {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                         self.viewSelection = "WinGame"
+                                        PlaygroundPage.current.assessmentStatus = .pass(message: "Yay, you won! Now, let's try to edit the Playground on the left side and add your own photos. After that, you can share with your family and friends, just like Sarah.")
                                     }
                                 }
                             } else if GameController.selectedPhotos.count == 2 {
