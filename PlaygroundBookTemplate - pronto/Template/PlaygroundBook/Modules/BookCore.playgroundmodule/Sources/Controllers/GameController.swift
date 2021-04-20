@@ -19,11 +19,7 @@ public class GameController {
     ]
     public static var storyIndex: Int = 1
     // MARK: Photos
-    public static var photos: Set<Photo> = [
-        Photo(title: "Uncle and aunt Wedding", image: #imageLiteral(resourceName: "photo-1")),
-        Photo(title: "Skateboarding", image: #imageLiteral(resourceName: "photo-4")),
-        Photo(title: "Mom and Baby Sarah", image: #imageLiteral(resourceName: "photo-7")),
-    ]
+    public static var photos: Set<Photo> = []
     public static var photosGame: [Photo] = []
     public static var selectedPhotos: Set<Photo> = []
     // MARK: Sound Effects
@@ -97,6 +93,10 @@ public class GameController {
     
     public func getSeletedPhoto(at: Int) -> Photo {
         return GameController.selectedPhotos[GameController.selectedPhotos.index(GameController.selectedPhotos.startIndex, offsetBy: at)]
+    }
+    
+    public static func getPhoto(at: Int) -> Photo {
+        return GameController.photos[GameController.photos.index(GameController.photos.startIndex, offsetBy: at)]
     }
     
     public static func playSound(_ url: URL, volume: Float = 1) {

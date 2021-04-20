@@ -22,6 +22,8 @@
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
 		5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* LiveViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
+		B544A3F6262DA5B200914E98 /* PhotoUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544A3F5262DA5B200914E98 /* PhotoUnit.swift */; };
+		B544A3FE262DAA3A00914E98 /* PolaroidWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544A3FD262DAA3A00914E98 /* PolaroidWithDescription.swift */; };
 		B56BDC27262B777A00E590E3 /* WinGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BDC26262B777A00E590E3 /* WinGame.swift */; };
 		B56BDC2C262BB19900E590E3 /* paper.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56BDC2B262BB19900E590E3 /* paper.mp3 */; };
 		B56BDC38262BCB5900E590E3 /* PlaygroundCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B56BDC37262BCB5900E590E3 /* PlaygroundCover.jpg */; };
@@ -156,6 +158,8 @@
 		5EF2F9AB2054BBF300191409 /* libBookCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBookCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
+		B544A3F5262DA5B200914E98 /* PhotoUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUnit.swift; sourceTree = "<group>"; };
+		B544A3FD262DAA3A00914E98 /* PolaroidWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidWithDescription.swift; sourceTree = "<group>"; };
 		B56BDC26262B777A00E590E3 /* WinGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinGame.swift; sourceTree = "<group>"; };
 		B56BDC2B262BB19900E590E3 /* paper.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = paper.mp3; sourceTree = "<group>"; };
 		B56BDC37262BCB5900E590E3 /* PlaygroundCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PlaygroundCover.jpg; sourceTree = "<group>"; };
@@ -411,6 +415,8 @@
 				B5FF9F3B262A6D3500492F5F /* Polaroid.swift */,
 				B5FF9F40262A6D8100492F5F /* Game.swift */,
 				B56BDC26262B777A00E590E3 /* WinGame.swift */,
+				B544A3F5262DA5B200914E98 /* PhotoUnit.swift */,
+				B544A3FD262DAA3A00914E98 /* PolaroidWithDescription.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -628,11 +634,13 @@
 				B5FF9F41262A6D8100492F5F /* Game.swift in Sources */,
 				B56BDC27262B777A00E590E3 /* WinGame.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
+				B544A3FE262DAA3A00914E98 /* PolaroidWithDescription.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
 				B5FF9F34262A1BE800492F5F /* StoryUnit.swift in Sources */,
 				B59ED8B4262A0D7D00090A69 /* Photo.swift in Sources */,
 				B5FF9F25262A0E8E00492F5F /* Story.swift in Sources */,
 				B5FF9F3C262A6D3500492F5F /* Polaroid.swift in Sources */,
+				B544A3F6262DA5B200914E98 /* PhotoUnit.swift in Sources */,
 				B5FF9F2B262A0F3500492F5F /* GameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

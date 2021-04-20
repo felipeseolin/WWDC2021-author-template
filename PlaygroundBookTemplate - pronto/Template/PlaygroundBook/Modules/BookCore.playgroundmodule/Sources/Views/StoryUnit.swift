@@ -89,7 +89,6 @@ public struct StoryUnit: View {
                     // MARK: Foward Button
                     Button(action: {
                         if storyIndex < GameController.stories.count - 1 {
-                            print(storyIndex)
                             GameController.playNextStory()
                             self.viewSelection = "Story"
                         } else {
